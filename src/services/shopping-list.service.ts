@@ -39,7 +39,7 @@ export class ShoppingListService {
 
     fetchList(token: string){
         const userId = this.authService.getCurrentUser().uid;
-        return this.http.get('https://ionic2-recipebook-f1c4d.firebaseio.com/' + userId + '/recipe-list.json?auth='+ token)
+        return this.http.get('https://ionic2-recipebook-f1c4d.firebaseio.com/' + userId + '/shopping-list.json?auth='+ token)
             .map((response: Response) => {
                 return response.json();
             })
